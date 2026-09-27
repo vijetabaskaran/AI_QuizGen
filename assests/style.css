@@ -1,0 +1,156 @@
+/* AI QuizGen — dark, dull, academic theme with strong contrast */
+
+:root {
+    --bg-primary: #14161a;
+    --bg-secondary: #1c1f26;
+    --bg-card: #20232b;
+    --border-color: #333844;
+    --text-primary: #e8e9ec;
+    --text-secondary: #a7abb5;
+    --accent: #6b8f71;        /* muted academic green */
+    --accent-soft: #364a3a;
+    --danger: #c46a6a;
+    --success: #7ba17f;
+}
+
+.stApp {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.quizgen-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.1rem;
+}
+
+.quizgen-subtitle {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.quizgen-section-header {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.4rem;
+    margin-top: 1.6rem;
+    margin-bottom: 0.8rem;
+}
+
+.quizgen-success-banner {
+    background-color: var(--accent-soft);
+    color: var(--text-primary);
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    padding: 0.6rem 1rem;
+    margin: 0.6rem 0 1rem 0;
+    font-size: 0.95rem;
+}
+
+.quizgen-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.4rem 1.5rem;
+    margin-bottom: 1.6rem;
+}
+
+.quizgen-card-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 0.4rem;
+    column-gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.quizgen-q-number {
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.quizgen-q-badge {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    padding: 0.2rem 0.7rem;
+    white-space: nowrap;
+}
+
+.quizgen-question-text {
+    font-size: 1.08rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.quizgen-option {
+    color: var(--text-secondary);
+    padding: 0.4rem 0.2rem;
+    font-size: 0.98rem;
+    line-height: 1.5;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.quizgen-option:last-of-type {
+    border-bottom: none;
+}
+
+.quizgen-option-correct {
+    color: var(--success);
+    font-weight: 600;
+}
+
+.quizgen-answer-block {
+    margin-top: 0.9rem;
+    padding-top: 0.8rem;
+    border-top: 1px dashed var(--border-color);
+    color: var(--success);
+    font-size: 0.98rem;
+    line-height: 1.6;
+}
+
+.quizgen-answer-label {
+    color: var(--text-secondary);
+    font-weight: 600;
+    margin-right: 0.3rem;
+}
+
+/* Breathing room between each quiz card and the widget Streamlit renders
+   right after it (radio group / text input) */
+div[data-testid="stForm"] .quizgen-card {
+    margin-bottom: 0.6rem;
+}
+
+div[data-testid="stForm"] div[data-testid="stRadio"],
+div[data-testid="stForm"] div[data-testid="stTextInput"] {
+    margin-bottom: 1.8rem;
+}
+
+div.stButton > button {
+    background-color: var(--accent);
+    color: #0e1712;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1.4rem;
+}
+
+div.stButton > button:hover {
+    background-color: #7fa585;
+    color: #0e1712;
+}
+
+textarea {
+    background-color: var(--bg-secondary) !important;
+    color: var(--text-primary) !important;
+}

@@ -1,0 +1,20 @@
+streamlit>=1.32.0
+
+# Document extraction
+pypdf>=4.0.0
+python-docx>=1.1.0
+
+# NLP pipeline
+spacy>=3.7.0
+nltk>=3.8.1
+transformers>=4.38.0
+torch>=2.2.0
+sentencepiece>=0.2.0
+
+# After installing requirements, also run:
+#   python -m spacy download en_core_web_sm
+#   python -c "import nltk; nltk.download('wordnet'); nltk.download('omw-1.4')"
+#
+# First run of the app will also download the T5 question-generation
+# model (~250 MB with the default small model in utils/question_generator.py).
+# This is a ONE-TIME download, cached under ~/.cache/huggingface afterward.
